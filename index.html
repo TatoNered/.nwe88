@@ -1,71 +1,482 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { motion } from "framer-motion";
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>- Cổng Cá Cược Trực Tuyến Uy Tín Số 1 Việt Nam</title>
+    <meta
+      name="description"
+      content="NWE88 là nền tảng cá cược trực tuyến hàng đầu tại Việt Nam với hàng trăm trò chơi hấp dẫn, thưởng lớn mỗi ngày, bảo mật cao và hỗ trợ 24/7. Tham gia ngay để nhận khuyến mãi cực khủng!"
+    />
 
-// Импорт шрифта Roboto подключается в <head> HTML-документа:
-// <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-export default function Home() {
-  return (
-    <div className="bg-gradient-to-b from-[#0b0c1e] to-[#1a1c38] min-h-screen text-white font-sans">
-      {/* Шапка сайта с навигацией */}
-      <header className="p-4 border-b border-[#2e305c] flex justify-between items-center bg-[#0d0f28]">
-        <h1 className="text-2xl font-bold text-[#ffc107]">NWE88</h1>
-        <nav className="space-x-4">
-          <Button variant="ghost" className="text-[#ff4081] hover:text-[#ffffff]">Trò chơi</Button>
-          <Button variant="ghost" className="text-[#00e5ff] hover:text-[#ffffff]">Cược thể thao</Button>
-          <Button variant="ghost" className="text-[#7c4dff] hover:text-[#ffffff]">Khuyến mãi</Button>
-          <Button variant="ghost" className="text-[#ff9100] hover:text-[#ffffff]">Liên hệ</Button>
-          <Button variant="default" className="bg-[#00e676] hover:bg-[#00c853]">Đăng nhập</Button>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="animation.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="header-container">
+        <div class="logo">
+          <a href="index.html">NWE88</a>
+        </div>
+        <nav class="nav">
+          <ul class="nav-links">
+            <li><a href="#">Trò chơi</a></li>
+            <li><a href="#">Cược thể thao</a></li>
+            <li><a href="#">Khuyến mãi</a></li>
+            <li><a href="#">Liên hệ</a></li>
+            <li><a href="#" class="login-btn">Đăng nhập</a></li>
+          </ul>
+          <div class="menu-toggle" id="menu-toggle">☰</div>
         </nav>
-      </header>
+      </div>
+    </header>
 
-      {/* Главный баннер с анимацией */}
-      <motion.section 
-        className="text-center py-20 px-4"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        <h2 className="text-4xl font-bold mb-4 text-[#ffea00]">Chào mừng bạn đến với NWE88</h2>
-        <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-          Khám phá thế giới trò chơi cá cược đỉnh cao với máy đánh bạc trực tuyến, casino trực tiếp và cược thể thao. Nhận khuyến mãi hấp dẫn và bắt đầu chơi ngay hôm nay!
-        </p>
-        <Button size="lg" className="bg-[#ff4081] hover:bg-[#f50057] transition-transform duration-200 hover:scale-105">
-          Bắt đầu chơi
-        </Button>
-      </motion.section>
-
-      {/* Секция категорий игр с адаптивной сеткой и изображениями */}
-      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-6 py-12">
-        {["Máy đánh bạc", "Casino trực tiếp", "Cược thể thao"].map((category, idx) => (
-          <Card key={idx} className="bg-[#1e2148] border border-[#30336b] hover:shadow-lg transition-all">
-            <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-2 text-[#00e5ff]">{category}</h3>
-              <p className="text-gray-400">
-                Trải nghiệm những trò chơi hàng đầu trong danh mục "{category}". Giải trí và thắng lớn!
-              </p>
-              {/* Lazy loading изображений */}
-              <img 
-                src={`/images/${category.toLowerCase().replace(/\\s/g, '-')}.webp`} 
-                alt={category} 
-                loading="lazy"
-                className="w-full h-auto rounded-xl mt-4"
-              />
-            </CardContent>
-          </Card>
-        ))}
+    <main>
+      <section class="hero-section animate-on-scroll">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Chào mừng đến với <span>VietCasino</span></h1>
+            <p>
+              Khám phá hàng trăm trò chơi hấp dẫn và nhận phần thưởng lớn mỗi
+              ngày!
+            </p>
+            <a
+              href="https://masotery.com/Ptp3zCJx "
+              rel="nofollow sponsored"
+              class="cta-button"
+              >Bắt đầu chơi</a
+            >
+          </div>
+          <div class="hero-features">
+            <div class="feature-card slide-up">
+              <h3>🎰 Máy đánh bạc</h3>
+              <p>Hàng loạt trò chơi nổ hũ với RTP cao và jackpot khủng.</p>
+            </div>
+            <div class="feature-card slide-up">
+              <h3>🃏 Casino trực tiếp</h3>
+              <p>Thưởng thức trải nghiệm thực tế cùng dealer chuyên nghiệp.</p>
+            </div>
+            <div class="feature-card slide-up">
+              <h3>💰 Thưởng hàng ngày</h3>
+              <p>Đăng nhập và nhận thưởng miễn phí mỗi ngày!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-intro animate-on-scroll">
+        <div class="intro-container">
+          <div class="intro-text slide-in">
+            <h2>Chào mừng bạn đến với <span>NWE88</span></h2>
+            <p>
+              Cổng cá cược trực tuyến uy tín và hấp dẫn nhất tại Việt Nam.
+              <br />
+              Chúng tôi cung cấp trải nghiệm chơi game đa dạng: từ
+              <strong>casino trực tiếp</strong>, <strong>máy đánh bạc</strong>,
+              đến các <strong>sự kiện thể thao hàng đầu</strong> thế giới.
+              <br />
+              Hệ thống bảo mật tiên tiến, khuyến mãi hấp dẫn và dịch vụ 24/7 sẽ
+              mang đến cho bạn trải nghiệm giải trí hoàn hảo và cơ hội trúng
+              thưởng lớn.
+            </p>
+            <a
+              href="https://masotery.com/Ptp3zCJx "
+              rel="nofollow sponsored"
+              class="cta-button"
+              >Tìm hiểu thêm</a
+            >
+          </div>
+          <div class="intro-image">
+            <img src="images/intro.jpg" alt="Casino woman" />
+            <div class="glow-circle"></div>
+          </div>
+        </div>
+      </section>
+      <section class="games-section animate-on-scroll">
+        <div class="container">
+          <h2 class="section-subtitle accent-pink">Các Trò Chơi Phổ Biến</h2>
+          <div class="game-card-grid">
+            <div class="game-card zoom-in">
+              <img src="images/game1.jpg" alt="Slots Game" />
+              <div class="game-info">
+                <h4>Máy Đánh Bạc</h4>
+                <a
+                  href="https://masotery.com/Ptp3zCJx "
+                  rel="nofollow sponsored"
+                  class="play-button"
+                  >Chơi Ngay</a
+                >
+              </div>
+            </div>
+            <div class="game-card zoom-in">
+              <img src="images/game2.jpeg" alt="Live Casino" />
+              <div class="game-info">
+                <h4>Casino Trực Tiếp</h4>
+                <a
+                  href="https://masotery.com/Ptp3zCJx "
+                  rel="nofollow sponsored"
+                  class="play-button"
+                  >Chơi Ngay</a
+                >
+              </div>
+            </div>
+            <div class="game-card zoom-in">
+              <img src="images/game3.jpeg" alt="Sports Betting" />
+              <div class="game-info">
+                <h4>Cược Thể Thao</h4>
+                <a
+                  href="https://masotery.com/Ptp3zCJx "
+                  rel="nofollow sponsored"
+                  class="play-button"
+                  >Chơi Ngay</a
+                >
+              </div>
+            </div>
+            <div class="game-card zoom-in">
+              <img src="images/game4.jpg" alt="Card Games" />
+              <div class="game-info">
+                <h4>Game Bài</h4>
+                <a
+                  href="https://masotery.com/Ptp3zCJx "
+                  rel="nofollow sponsored"
+                  class="play-button"
+                  >Chơi Ngay</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
-      {/* Футер с информацией о правах и безопасности */}
-      <footer className="border-t border-[#2e305c] p-4 text-center text-sm text-gray-400 bg-[#0d0f28]">
-        © 2025 NWE88. Mọi quyền được bảo lưu.
-        <br />
-        <span className="text-xs">
-          Được tối ưu hóa cho SEO, bảo mật HTTPS, tốc độ tải và mọi trình duyệt hiện đại.
-        </span>
-      </footer>
-    </div>
-  );
-}
+      <section class="advantages-light animate-on-scroll">
+        <div class="section-title">
+          <h2>Tại Sao Chọn NWE88?</h2>
+        </div>
+        <div class="card-grid">
+          <div class="adv-card">
+            <span>✅</span>
+            <p>
+              <strong>Giao diện dễ sử dụng</strong>, thân thiện với người chơi
+              trên mọi thiết bị (di động, máy tính bảng, PC).
+            </p>
+          </div>
+          <div class="adv-card">
+            <span>✅</span>
+            <p>
+              <strong>Hệ thống bảo mật SSL</strong> giúp bảo vệ thông tin cá
+              nhân và tài khoản của người chơi một cách an toàn nhất.
+            </p>
+          </div>
+          <div class="adv-card">
+            <span>✅</span>
+            <p>
+              <strong>Khuyến mãi hấp dẫn</strong>: Nhận thưởng chào mừng, hoàn
+              trả hàng ngày, và nhiều chương trình khuyến mãi độc quyền cho
+              thành viên mới và cũ.
+            </p>
+          </div>
+          <div class="adv-card">
+            <span>✅</span>
+            <p>
+              <strong>Hỗ trợ đa phương thức thanh toán</strong>: Nạp và rút tiền
+              nhanh chóng qua nhiều hình thức thanh toán, bao gồm thẻ ngân hàng,
+              ví điện tử, và chuyển khoản trực tiếp.
+            </p>
+          </div>
+          <div class="adv-card">
+            <span>✅</span>
+            <p>
+              <strong>Hệ thống trò chơi phong phú</strong>: Đa dạng các trò chơi
+              như máy đánh bạc, casino trực tuyến, cược thể thao, poker, và
+              nhiều trò chơi thú vị khác.
+            </p>
+          </div>
+          <div class="adv-card">
+            <span>✅</span>
+            <p>
+              <strong>Hỗ trợ khách hàng 24/7</strong>: Đội ngũ nhân viên chuyên
+              nghiệp luôn sẵn sàng giúp đỡ bạn mọi lúc mọi nơi.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slots-highlight-alt animate-on-scroll">
+        <div class="slots-container">
+          <div class="slots-image">
+            <img src="images/girl1.jpg" alt="Slot Machine Game" />
+          </div>
+          <div class="slots-text slide-in">
+            <h2>Trò Chơi Tại NWE88</h2>
+            <p>
+              Tại NWE88, chúng tôi cung cấp một bộ sưu tập các trò chơi hấp dẫn
+              từ các nhà phát triển hàng đầu như Evolution Gaming, Pragmatic
+              Play, NetEnt và nhiều nhà cung cấp uy tín khác. Bạn có thể tham
+              gia các trò chơi casino trực tiếp với người chia bài thật, tham
+              gia cược thể thao trực tuyến, hoặc thử sức với các trò chơi máy
+              đánh bạc và game bài.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="sports-highlight-alt animate-on-scroll">
+        <div class="container">
+          <h2 class="section-subtitle">Cược Thể Thao</h2>
+          <div class="sports-grid">
+            <div class="match-card">
+              <h4>⚽ Bóng đá</h4>
+              <p>Các giải đấu châu Âu, Việt Nam, World Cup,...</p>
+            </div>
+            <div class="match-card">
+              <h4>🏀 Bóng rổ</h4>
+              <p>Cược NBA và các trận đấu quốc tế hàng đầu.</p>
+            </div>
+            <div class="match-card">
+              <h4>🎾 Tennis</h4>
+              <p>Cược ATP, WTA, các giải Grand Slam trực tiếp.</p>
+            </div>
+            <div class="match-card">
+              <h4>🏎️ Đua xe</h4>
+              <p>F1, MotoGP và các giải tốc độ hấp dẫn nhất thế giới.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-brand-section animate-on-scroll">
+        <div class="cta-brand-container">
+          <div class="cta-brand-content slide-in">
+            <h2>Hãy Tham Gia <span class="brand">NWE88</span> Ngay Hôm Nay!</h2>
+            <p class="highlight">
+              Thế giới cá cược đỉnh cao đang chờ bạn: thưởng chào mừng hấp dẫn,
+              hàng trăm trò chơi và hệ thống bảo mật tuyệt đối.
+            </p>
+            <p>
+              Với <strong>NWE88</strong>, bạn không chỉ chơi – bạn trải nghiệm,
+              tận hưởng và chiến thắng. Dù bạn yêu thích casino trực tiếp, máy
+              đánh bạc, hay cược thể thao – chúng tôi có mọi thứ bạn cần. Hãy
+              trở thành một phần của cộng đồng hàng nghìn người chơi đang thắng
+              lớn mỗi ngày!
+            </p>
+            <a
+              href="https://masotery.com/Ptp3zCJx "
+              rel="nofollow sponsored"
+              class="cta-button-green"
+              >Đăng Ký Ngay</a
+            >
+          </div>
+          <div class="cta-brand-image slide-up">
+            <img src="images/main-bg.jpg" alt="NWE88 Banner" />
+          </div>
+        </div>
+      </section>
+      <section class="article-featured animate-on-scroll">
+        <div class="article-container">
+          <article>
+            <div class="article-header">
+              <h2>Khám Phá Thế Giới Cá Cược Tại NWE88</h2>
+              <p class="article-subtitle">
+                Đắm chìm trong không gian giải trí hiện đại, nơi mọi trò chơi
+                đều là một trải nghiệm đỉnh cao.
+              </p>
+            </div>
+
+            <div class="article-body">
+              <p>
+                Tại <strong>NWE88</strong>, người chơi không chỉ đơn thuần là
+                tham gia cá cược — mà là bước vào một thế giới đầy màu sắc, nơi
+                cảm xúc và chiến thắng hòa quyện. Với sự kết hợp giữa công nghệ
+                tiên tiến và trải nghiệm người dùng mượt mà, chúng tôi mang đến
+                cho bạn một nền tảng cá cược đích thực.
+              </p>
+
+              <blockquote>
+                “Không chỉ là một trò chơi, mà là hành trình chinh phục may
+                mắn.”
+              </blockquote>
+
+              <p>
+                Từ máy đánh bạc, poker, đến cược thể thao trực tiếp – tất cả đều
+                được chọn lọc từ những nhà phát triển hàng đầu. Hệ thống bảo mật
+                tối ưu cùng các chương trình khuyến mãi siêu hấp dẫn là điểm
+                nhấn giúp NWE88 trở thành sự lựa chọn số 1 tại Việt Nam.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="article-comparison animate-on-scroll">
+        <article>
+          <div class="article-grid">
+            <div class="article-text slide-up">
+              <h2>
+                <span class="highlighted">NWE88</span> – Sự lựa chọn số 1 tại
+                Việt Nam
+              </h2>
+              <p class="subtitle">
+                Vượt qua hàng loạt đối thủ để trở thành nền tảng cá cược trực
+                tuyến được yêu thích nhất.
+              </p>
+              <p>
+                Trong năm vừa qua, <strong>NWE88</strong> đã chính thức vượt mặt
+                các nhà cái nổi bật như <strong>98Win</strong>,
+                <strong>J88</strong>, <strong>32Com</strong> và
+                <strong>SHBet</strong>
+                để trở thành nền tảng cá cược được người chơi tin tưởng và lựa
+                chọn hàng đầu.
+              </p>
+              <p>
+                Với giao diện hiện đại, kho trò chơi phong phú và hệ thống bảo
+                mật tuyệt đối, NWE88 không chỉ là một trang cá cược — mà là trải
+                nghiệm giải trí toàn diện. Sự kết hợp giữa công nghệ và chăm sóc
+                khách hàng đã giúp NWE88 chinh phục hàng triệu người chơi tại
+                Việt Nam.
+              </p>
+            </div>
+            <div class="article-image slide-i">
+              <img src="images/article.jpg" alt="NWE88 thắng thế các đối thủ" />
+            </div>
+          </div>
+        </article>
+      </section>
+      <section class="seo-article-section animate-on-scroll">
+        <div class="seo-article-container">
+          <div class="seo-article-header">
+            <h2>Vì Sao NWE88 Được Xem Là Nhà Cái Đáng Tin Cậy Nhất 2025?</h2>
+            <p class="article-subtitle">
+              Những lý do khiến hàng triệu người chơi lựa chọn NWE88 mỗi ngày.
+            </p>
+          </div>
+          <article>
+            <div class="seo-article-body">
+              <p>
+                Trong thị trường cá cược trực tuyến đang phát triển nhanh chóng
+                tại Việt Nam, <strong>NWE88</strong> đã nổi bật như một thương
+                hiệu hàng đầu. Với giao diện hiện đại, hệ thống bảo mật nhiều
+                lớp và dịch vụ khách hàng tận tâm, NWE88 mang lại trải nghiệm
+                toàn diện mà ít nhà cái nào có thể sánh bằng.
+              </p>
+
+              <p>
+                Không giống như nhiều nền tảng khác, NWE88 tập trung vào việc
+                xây dựng sự tin tưởng lâu dài với người dùng. Bằng cách cung cấp
+                <strong>chương trình khuyến mãi liên tục</strong>, hỗ trợ
+                <strong>đa nền tảng</strong> và tích hợp các trò chơi từ những
+                nhà phát triển hàng đầu thế giới như
+                <em>NetEnt, Evolution, Pragmatic Play</em>, nền tảng này thực sự
+                xứng đáng với danh hiệu “Nhà cái uy tín nhất 2025”.
+              </p>
+
+              <ul class="seo-list">
+                <li>🎯 Tỷ lệ cược cạnh tranh, minh bạch</li>
+                <li>🔐 Hệ thống SSL và xác thực hai lớp</li>
+                <li>📱 Hỗ trợ toàn diện trên di động và máy tính</li>
+                <li>🎁 Ưu đãi cá nhân hóa cho từng người chơi</li>
+              </ul>
+
+              <p>
+                Với hàng loạt lợi thế như vậy, không có gì ngạc nhiên khi
+                <strong>NWE88</strong> liên tục đứng đầu các bảng xếp hạng và
+                được đánh giá cao trên nhiều diễn đàn uy tín.
+                <br />
+                Nếu bạn đang tìm kiếm một nhà cái
+                <strong>an toàn – minh bạch – chất lượng</strong>, NWE88 chính
+                là lựa chọn xứng đáng.
+              </p>
+              <a
+                href="https://masotery.com/Ptp3zCJx "
+                rel="nofollow sponsored"
+                class="cta-button"
+                >Tìm hiểu thêm</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-image-section animate-on-scroll">
+        <div class="cta-container">
+          <div class="cta-image-block">
+            <img src="images/banner2.jpg" alt="Asian casino girl" />
+          </div>
+          <div class="cta-text-block">
+            <h2>Hãy Tham Gia NWE88 Ngay Hôm Nay!</h2>
+            <p>
+              Khám phá thế giới cá cược hấp dẫn cùng NWE88 – nơi bạn có thể chơi
+              game, nhận thưởng và thắng lớn mỗi ngày. Đừng bỏ lỡ cơ hội đặc
+              biệt dành riêng cho bạn!
+            </p>
+            <a
+              href="https://masotery.com/Ptp3zCJx "
+              rel="nofollow sponsored"
+              class="cta-button"
+              >Đăng Ký Ngay</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="conclusion-section animate-on-scroll">
+        <div class="conclusion-content">
+          <h2>
+            Hãy Tham Gia <span class="highlighted">NWE88</span> Ngay Hôm Nay!
+          </h2>
+          <p class="conclusion-lead">
+            NWE88 mang đến cho bạn một trải nghiệm cá cược
+            <strong>hoàn toàn mới mẻ</strong> và <strong>đầy hấp dẫn</strong>.
+          </p>
+          <p>
+            Đừng bỏ lỡ cơ hội nhận <strong>khuyến mãi độc quyền</strong>, chơi
+            hàng trăm trò chơi hot nhất và chinh phục những phần thưởng giá trị.
+            <br />
+            Tham gia cộng đồng người chơi của
+            <span class="highlighted">NWE88</span> ngay hôm nay để tận hưởng mọi
+            đặc quyền!
+          </p>
+          <a
+            href="https://masotery.com/Ptp3zCJx "
+            rel="nofollow sponsored"
+            class="cta-button-green"
+            >Đăng Ký Ngay</a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <h3>NWE88</h3>
+          <p>
+            Cổng cá cược trực tuyến uy tín tại Việt Nam. Trải nghiệm casino, thể
+            thao, slots và nhiều hơn nữa.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Liên kết nhanh</h4>
+          <ul>
+            <li><a href="#">Trò chơi</a></li>
+            <li><a href="#">Cược thể thao</a></li>
+            <li><a href="#">Khuyến mãi</a></li>
+            <li><a href="#">Liên hệ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Hỗ trợ</h4>
+          <ul>
+            <li><a href="#">Trung tâm trợ giúp</a></li>
+            <li><a href="#">Điều khoản & Điều kiện</a></li>
+            <li><a href="#">Chính sách bảo mật</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 NWE88. Mọi quyền được bảo lưu.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
