@@ -1664,6 +1664,24 @@ blockquote {
     </footer>
 
     <script src="script.js"></script>
+    <script>
+    // JavaScript код для добавления класса "visible" при прокрутке
+    const elements = document.querySelectorAll('.animate-on-scroll, .zoom-on-scroll, .fade-in, .slide-in, .slide-up, .zoom-in, .mobile-platform-card');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');  // Добавляем класс "visible" (запуск анимации)
+          observer.unobserve(entry.target);       // Прекращаем наблюдение за этим элементом
+        }
+      });
+    }, { threshold: 0.5 });  // Срабатывает, когда 50% элемента становится видимым
+
+    // Применяем наблюдатель ко всем элементам
+    elements.forEach(element => {
+      observer.observe(element);
+    });
+  </script>
   </body>
 </html>
 
