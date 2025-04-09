@@ -1,67 +1,71 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Đăng ký tài khoản - NWE88</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Trang chủ</a></li>
-                <li><a href="games.html">Trò chơi</a></li>
-                <li><a href="promotions.html">Khuyến mãi</a></li>
-                <li><a href="contact.html">Liên hệ</a></li>
-            </ul>
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { motion } from "framer-motion";
+
+// Импорт шрифта Roboto подключается в <head> HTML-документа:
+// <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+export default function Home() {
+  return (
+    <div className="bg-gradient-to-b from-[#0b0c1e] to-[#1a1c38] min-h-screen text-white font-sans">
+      {/* Шапка сайта с навигацией */}
+      <header className="p-4 border-b border-[#2e305c] flex justify-between items-center bg-[#0d0f28]">
+        <h1 className="text-2xl font-bold text-[#ffc107]">NWE88</h1>
+        <nav className="space-x-4">
+          <Button variant="ghost" className="text-[#ff4081] hover:text-[#ffffff]">Trò chơi</Button>
+          <Button variant="ghost" className="text-[#00e5ff] hover:text-[#ffffff]">Cược thể thao</Button>
+          <Button variant="ghost" className="text-[#7c4dff] hover:text-[#ffffff]">Khuyến mãi</Button>
+          <Button variant="ghost" className="text-[#ff9100] hover:text-[#ffffff]">Liên hệ</Button>
+          <Button variant="default" className="bg-[#00e676] hover:bg-[#00c853]">Đăng nhập</Button>
         </nav>
-    </header>
-    
-    <section id="registration-form">
-        <h1>Đăng ký tài khoản NWE88</h1>
-        
-        <form action="register.php" method="POST">
-            <div class="form-group">
-                <label for="username">Tên đăng nhập:</label>
-                <input type="text" id="username" name="username" required>
-            </div>
+      </header>
 
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
+      {/* Главный баннер с анимацией */}
+      <motion.section 
+        className="text-center py-20 px-4"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <h2 className="text-4xl font-bold mb-4 text-[#ffea00]">Chào mừng bạn đến với NWE88</h2>
+        <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+          Khám phá thế giới trò chơi cá cược đỉnh cao với máy đánh bạc trực tuyến, casino trực tiếp và cược thể thao. Nhận khuyến mãi hấp dẫn và bắt đầu chơi ngay hôm nay!
+        </p>
+        <Button size="lg" className="bg-[#ff4081] hover:bg-[#f50057] transition-transform duration-200 hover:scale-105">
+          Bắt đầu chơi
+        </Button>
+      </motion.section>
 
-            <div class="form-group">
-                <label for="password">Mật khẩu:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
+      {/* Секция категорий игр с адаптивной сеткой и изображениями */}
+      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-6 py-12">
+        {["Máy đánh bạc", "Casino trực tiếp", "Cược thể thao"].map((category, idx) => (
+          <Card key={idx} className="bg-[#1e2148] border border-[#30336b] hover:shadow-lg transition-all">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-semibold mb-2 text-[#00e5ff]">{category}</h3>
+              <p className="text-gray-400">
+                Trải nghiệm những trò chơi hàng đầu trong danh mục "{category}". Giải trí và thắng lớn!
+              </p>
+              {/* Lazy loading изображений */}
+              <img 
+                src={`/images/${category.toLowerCase().replace(/\\s/g, '-')}.webp`} 
+                alt={category} 
+                loading="lazy"
+                className="w-full h-auto rounded-xl mt-4"
+              />
+            </CardContent>
+          </Card>
+        ))}
+      </section>
 
-            <div class="form-group">
-                <label for="confirm_password">Xác nhận mật khẩu:</label>
-                <input type="password" id="confirm_password" name="confirm_password" required>
-            </div>
-
-            <div class="form-group">
-                <label for="phone">Số điện thoại:</label>
-                <input type="tel" id="phone" name="phone" required>
-            </div>
-
-            <div class="form-group">
-                <label for="country">Quốc gia:</label>
-                <select id="country" name="country" required>
-                    <option value="vietnam">Việt Nam</option>
-                    <option value="other">Khác</option>
-                </select>
-            </div>
-
-            <button type="submit">Đăng ký ngay</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 NWE88. Tất cả quyền lợi được bảo vệ.</p>
-    </footer>
-</body>
-</html>
+      {/* Футер с информацией о правах и безопасности */}
+      <footer className="border-t border-[#2e305c] p-4 text-center text-sm text-gray-400 bg-[#0d0f28]">
+        © 2025 NWE88. Mọi quyền được bảo lưu.
+        <br />
+        <span className="text-xs">
+          Được tối ưu hóa cho SEO, bảo mật HTTPS, tốc độ tải và mọi trình duyệt hiện đại.
+        </span>
+      </footer>
+    </div>
+  );
+}
