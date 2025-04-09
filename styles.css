@@ -1,0 +1,107 @@
+/* styles.css */
+
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a; /* Темный фон */
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Контейнер для центрирования контента */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Хедер */
+  header {
+    background-color: #000000;
+    padding: 10px 0;
+    border-bottom: 2px solid #ffd700; /* Золотая линия */
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  .main-nav {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .main-nav li {
+    display: inline;
+  }
+  
+  .main-nav a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 15px;
+    transition: color 0.3s;
+  }
+  
+  .main-nav a:hover {
+    color: #ffd700; /* Золотой цвет при наведении */
+  }
+  
+  /* Кнопки авторизации */
+  .auth-buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .auth-buttons a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #ffd700;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .auth-buttons a:hover {
+    background-color: #e6c200;
+  }
+  
+  /* Баннер */
+  .hero-banner img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Основной контент */
+  main {
+    padding: 20px 0;
+  }
+  
+  h1, h2 {
+    color: #ffd700;
+  }
+  
+  .featured-brands, .promotions {
+    margin: 20px 0;
+  }
+  
+  .brand-logos img {
+    height: 80px;
+    margin: 10px;
+  }
+  
+  /* Футер */
+  footer {
+    background-color: #000000;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 2px solid #ffd700;
+  }
+  
+  footer p {
+    margin: 5px 0;
+  }
+  
